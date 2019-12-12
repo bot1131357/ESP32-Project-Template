@@ -1,0 +1,32 @@
+{
+    "configurations": [
+        {
+            "name": "ESP32",
+            "includePath": [
+                "build/config/*",
+                "${workspaceRoot}/**",
+                "${IDF_PATH}/components/**",
+                "${IDF_PATH}/components/spi_flash**",
+                "${XTENSA_ESP32_ELF_PATH}/xtensa-esp32-elf/include/*"
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": "",
+                "path": [
+                    "${workspaceRoot}",
+                    "${IDF_PATH}/components",
+                    "${XTENSA_ESP32_ELF_PATH}/xtensa-esp32-elf"
+                ]
+            },
+            "defines": [
+                "ESP32",
+                "FREERTOS"
+            ],
+            "compilerPath": "${XTENSA_ESP32_ELF_PATH}/bin/xtensa-esp32-elf-gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "compileCommands": "${workspaceFolder}/build/bootloader/compile_commands.json"
+        }
+    ],
+    "version": 4
+}

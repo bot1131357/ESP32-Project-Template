@@ -1,0 +1,58 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "clean",
+            "type": "shell",
+            "command": "idf.py clean",
+            "windows": {
+                "command": "bash"
+            },
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }        
+        },
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "idf.py build",
+            "windows": {
+                "command": "bash"
+            },
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }        
+        },
+        {
+            "label": "flash",
+            "type": "shell",
+            "command": "idf.py flash",
+            "windows": {
+                "command": "bash"
+            },
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }        
+        },
+        {
+            "label": "flash and monitor",
+            "type": "shell",
+            "command": "idf.py monitor",
+            "windows": {
+            "command": "bash"
+            },
+            "group": "build",
+            "presentation": {
+            "reveal": "always",
+            "panel": "new"
+            },
+            "dependsOn": ["build", "flash"]        
+        }
+    ]
+}
